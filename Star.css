@@ -1,0 +1,42 @@
+#star {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: brown;
+    Animation: star 10s infinite;
+}
+
+@keyframes star {
+    0% {
+        top: 100px;
+        left: 400px;
+    }
+
+    20% {
+        top: 500px;
+        left: 600px;
+    }
+
+    40% {
+
+        top: 300px;
+        left: 100px;
+    }
+
+    60% {
+        top: 300px;
+        left: 700px;
+    }
+
+    80% {
+        top: 500px;
+        left: 200px;
+    }
+
+    100% {
+        top: 100px;
+        left: 400px;
+    }
+
+
+}
