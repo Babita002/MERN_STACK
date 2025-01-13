@@ -1,0 +1,28 @@
+/* Car container */
+.animation{
+    position:absolute;
+    width:500px;
+    height:200px;
+    animation: car 3s linear ;
+}
+
+@keyframes car{
+    from{
+        top:0px; 
+        left:0px;
+    }
+    to{
+        top: 0px; left:950px;
+    }
+}       
+/* Road Container */
+.road{
+    position:absolute;
+    width:1000px;
+    height:590px;
+}
+/* Blank div container for spacing above car image */
+.blank{
+    height:280px;
+    width:1000px;
+}
