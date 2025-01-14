@@ -1,0 +1,35 @@
+/* background-color */
+body{
+    background-color: skyblue;
+    }
+    
+    /* parent container */
+.main{
+    width: 480px;
+    height: 480px;
+    border:10px solid grey;
+    margin: 0px 450px;
+}
+
+.black{
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    float: left;
+}
+.icon{
+    color: white;
+    margin:20px;
+    font-size:25px;
+}
+.icon2{
+    color: black;
+    margin:20px;
+    font-size:25px;
+}
+.white{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    float:left;
+}
