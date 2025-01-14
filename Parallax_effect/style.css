@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Top Heading */
+.heading_top{
+    color:white;
+    margin-left:400px;
+    padding-top:200px;
+    font-size:50px;
+}
+/* Section 1 */
+.section1{
+    background-image:URL("6.avif");
+    height:600px;
+    background-size: 100% 100%;
+    opacity:0.89;    
+    background-attachment: fixed;
+}
+/* Paragraph under section1 */
+.para1{
+    color: white;
+    font-size:20px; 
+    margin:30px 80px; 
+}
+/* Section2 */
+.section2{
+    height:400px;
+    background-color: rgba(244, 194, 194,0.4);
+    padding-top:20px;    
+}
+/* Heading of Section2 */
+.heading{
+    color:darkcyan;
+    font-size:30px;
+    margin:0px 440px;
+}
+/* Section2 paragraph */
+.para2{
+    color: darkcyan;
+    font-size:20px; 
+    margin:30px 80px; 
+}
+/* Section3 */
+.section3{
+    background-image:URL("7.png");
+    height:300px;
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+    
+}
+/* Section4 */
+.section4{
+    height:550px;
+    background-color: #97f5ed;
+}
+/* Paragraph of section4 */
+.para3{
+    color: goldenrod;
+    font-size:20px; 
+    padding:40px 80px;
+    width:50%;
+    font-size:20px;
+}
+/* Div container under section4 */
+.container2{
+    float:right;
+    width:40%;
+    padding-top:30px
+}
+/* Section5 */
+.section5{
+    height:400px;
+    background-image:URL("3.jpg");
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+}
+
+
