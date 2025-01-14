@@ -3,33 +3,37 @@ body{
     background-color: skyblue;
     }
     
-    /* parent container */
+/*parent container */
 .main{
     width: 480px;
     height: 480px;
-    border:10px solid grey;
-    margin: 0px 450px;
+    background-color: grey;
+    padding: 20px 20px;
+    margin-left:420px;
 }
-
-.black{
+/* Blocks */
+.block{
     width: 60px;
     height: 60px;
-    background-color: black;
-    float: left;
+    float:left;
 }
+/* Black blocks */
+.black{
+    background-color: black;
+}
+/* White blocks */
+.white{
+    background-color: white; 
+}
+/* white icons */
 .icon{
     color: white;
     margin:20px;
     font-size:25px;
 }
+/* Black icons */
 .icon2{
     color: black;
     margin:20px;
     font-size:25px;
-}
-.white{
-    width: 60px;
-    height: 60px;
-    background-color: white;
-    float:left;
 }
