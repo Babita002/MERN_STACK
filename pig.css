@@ -1,0 +1,116 @@
+/* Main container */
+.main {
+     width: 500px;
+     height: 400px;
+     background-color: #f2f2f2;
+     margin: 40px auto;
+ }
+/* Head */
+ .head {
+     width: 150px;
+     height: 150px;
+     background-color: pink;
+     border-radius: 50%;
+     float: left;
+     position: relative;
+     margin: 30px 0 -35px 180px;
+ }
+/* Left ear styling */
+ .left_ear {
+     width: 40px;
+     height: 40px;
+     background-color: pink;
+     border-radius: 50%;
+     float: left;
+ }
+/* right ear styling */
+ .right_ear {
+     width: 40px;
+     height: 40px;
+     background-color: pink;
+     border-radius: 50%;
+     float: left;
+     margin-left: 70px;
+ }
+/* Left eye */
+ .left_eye {
+     width: 20px;
+     height: 20px;
+     background-color: black;
+     border-radius: 50%;
+     float: left;
+     margin: 15px 0 0 40px;
+ }
+/* Right eye */
+ .right_eye {
+     width: 20px;
+     height: 20px;
+     background-color: black;
+     border-radius: 50%;
+     float: left;
+     margin: 15px 0 0 30px;
+ }
+/* Nose */
+ .nose {
+     width: 50px;
+     height: 50px;
+     background-color: #ff6f91;
+     border-radius: 50%;
+     float: left;
+     margin: 0px 0 0px 50px;
+
+ }
+ /* Nostrils */
+ .nostril1 {
+     width: 10px;
+     height: 10px;
+     background-color: black;
+     border-radius: 50%;
+     float: left;
+     margin: 20px 0 0 12px;
+ }
+
+ .nostril2 {
+     width: 10px;
+     height: 10px;
+     background-color: black;
+     border-radius: 50%;
+     float: left;
+     margin: 20px 0 20px 8px;
+ }
+ /* Tummy */
+ .tummy {
+    width: 200px;
+    height: 200px;
+    background-color: #d1495b;
+    border-radius: 50%;
+    float: left;
+    margin-left: 160px;
+}
+ /* Tail */
+.tail {
+    width: 0;
+    height: 0;
+    border-right: 1px solid transparent;
+    border-bottom: 60px solid pink;
+    border-left: 60px solid transparent;
+    float: left;
+    margin: -100px 0px 0 340px;
+}
+/* feet */
+.left_foot {
+    width: 40px;
+    height: 40px;
+    background-color: pink;
+    border-radius: 50%;
+    float: left;
+    margin:-25px 0px 0 190px;
+}
+.right_foot {
+    width: 40px;
+    height: 40px;
+    background-color: pink;
+    border-radius: 50%;
+    float: left;
+    margin:-25px 0 0 60px;
+}
