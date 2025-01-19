@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-size:40px;
+    position:relative;
+    top:50px;
+    left:300px;
+    letter-spacing: 20px;;
+}
+/* circles */
+.point {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: relative;
+}
+/* circle1 */
+.item1 {
+    top: 80px;
+    left: 550px;
+}
+/* circle2 */
+.item2 {
+    top: 150px;
+    left: 380px;
+}
+/* circle3 */
+.item3 {
+    top: 100px;
+    left: 730px;
+}
+/* circle4 */
+.item4 {
+    top: 270px;
+    left: 460px;
+}
+/* circle5 */
+.item5 {
+    top: 220px;
+    left: 650px;
+}
+/* Lines */
+.line{
+    width:230px;
+    position:relative;  
+}
+/* Line 1-5 */
+.one{
+    transform: translateY(100px) rotate(75deg);
+    top:220px;
+    left:460px;
+    width:350px;
+}
+/* Line 4-1 */
+.two{
+    transform: translateY(140px) rotate(105deg) ;
+    top:190px;
+    left:330px;
+    width:380px;
+   
+}
+/* Line 2-3 */
+.three{
+    transform: translateY(140px);
+    top:140px;
+    left:380px;
+    width:380px;
+    
+}
+/* Line 2-5 */
+.four{
+    transform: translateY(140px) rotate(40deg);
+    top:260px;
+    left:380px;
+    width:330px;
+
+}
+/* Line 4-3 */
+.five{
+    transform: translateY(140px) rotate(140deg);
+    top:260px;
+    left:430px;
+    width:350px;
+}
+/* Moving point  */
+.move {
+    top: 50px;
+    background-color: darkcyan;
+    border-radius: 40%;
+    animation: star 15s linear infinite;
+    box-shadow: 0 0 15px darkcyan;
+}
+
+@keyframes star {
+    0% {
+        top: 130px;
+        left: 550px;
+        transform:rotate(0deg);
+    }
+
+    20% {
+        top: 470px;
+        left: 660px;
+        transform:rotate(100deg);
+    }
+
+    40% {
+        top: 250px;
+        left: 370px;
+        transform:rotate(250deg);
+    }
+
+    60% {
+        top: 250px;
+        left: 730px;
+        transform:rotate(400deg);
+    }
+
+    80% {
+        top: 480px;
+        left: 450px;
+        transform:rotate(550deg);
+    }
+
+    100% {
+        top: 130px;
+        left: 550px;
+        transform:rotate(650deg);
+    }
+}
