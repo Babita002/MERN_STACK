@@ -51,22 +51,24 @@
 }
 /* Section4 */
 .section4{
-    height:550px;
+    height:520px;
+    width:100%;
     background-color: #97f5ed;
 }
 /* Paragraph of section4 */
 .para3{
     color: goldenrod;
     font-size:20px; 
-    padding:40px 80px;
+    padding:20px 40px;
     width:50%;
     font-size:20px;
+    float:left;
 }
 /* Div container under section4 */
 .container2{
-    float:right;
+    float:left;
     width:40%;
-    padding-top:30px
+    padding-top:30px;
 }
 /* Section5 */
 .section5{
