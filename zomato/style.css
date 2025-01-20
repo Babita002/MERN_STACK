@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------Header----------- */
+header {
+    width: 100%;
+    background-image: url("top.avif");
+    background-repeat: no-repeat;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.app {
+    margin-top: 15px;
+}
+
+.app a {
+    text-decoration: none;
+    color: white;
+}
+
+.navlinks {
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    padding: 20px;
+}
+
+.user {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+
+}
+
+.icon {
+    color: white;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 150px;
+    z-index:1;
+}
+
+.content a {
+    color: black;
+    padding: 5px 6px;
+    text-decoration: none;
+    display: block;
+    margin-left:none !important;
+}
+
+.content a:hover {
+    background-color: #ddd;
+}
+
+.user:hover .content {
+    display: block;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+    margin-top: 7px;
+}
+
+.profile {
+    width: 7vh;
+    height: 7vh;
+    display: flex;
+    background-color: blueviolet;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+/* --------Home-------- */
+.home {
+    position: relative;
+    justify-items: center;
+    top: -335px;
+}
+
+.home-heading {
+    color: white;
+    font-size: 80px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.home-para {
+    color: white;
+    font-size: 35px;
+    margin: 20px 0px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.search {
+    width: 760px;
+    height: 58px;
+    align-content: center;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    margin-top: 40px;
+}
+
+.location {
+    width: 200px;
+}
+
+input {
+    align-content: center;
+    margin-left: 14px;
+    border: none;
+    width: 450px;
+    color: grey;
+    outline: none;
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+datalist {
+    width: 200px;
+}
+
+.pipe {
+    align-self: center;
+    color: grey;
+    padding: 5px;
+    opacity: 0.7;
+    font-size: 20px;
+}
+
+.icon1 {
+    color: red;
+    font-size: 22px;
+    align-self: center;
+    margin-left: 14px;
+    opacity: 0.7;
+}
+
+.icon {
+    font-size: 20px;
+    align-self: center;
+    margin-left: 5px;
+    color: grey;
+    opacity: 0.7;
+}
+
+/* -------------order/dining---------- */
+.online-dining {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    top: -250px;
+    padding: 40px;
+}
+
+.order-online,
+.order-dining {
+    width: 500px;
+    height: 260px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+}
+
+.order-online img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.order-dining img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.order-heading {
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.order-para {
+    margin-left: 15px;
+}
