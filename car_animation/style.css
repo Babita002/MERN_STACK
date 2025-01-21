@@ -1,0 +1,62 @@
+body{
+    background-image: url("road.avif");
+    background-repeat: no-repeat;
+    background-size: 1000px 400px;
+    background-size: cover;
+}
+.car{
+    position:relative;
+    margin-top:450px;
+    width:400px;
+    height:200px; 
+    animation: car 5s linear infinite ;
+}
+.wheel-left{
+    height:80px;
+    width:80px;
+    position:relative;
+    top:-150px;
+    left:14px;  
+    animation:wheel-left 5s linear infinite ;
+
+}
+.wheel-right{
+    height:80px;
+    width:80px;
+    position:relative;
+    top:-230px;
+    left:198px;  
+    animation: wheel-right 5s linear  infinite;
+}
+
+@keyframes car{
+    from{
+        top:0px; 
+        left:0px;
+    }
+    to{
+        top: 0px; left:1000px;
+    }
+} 
+@keyframes wheel-left{
+    from{
+        top:-150px; 
+        left:14px;
+        transform: rotate(0deg);
+    }
+    to{
+        top: -150px; left:1015px;
+        transform: rotate(330deg);
+    }
+}
+@keyframes wheel-right{
+    from{
+        top:-230px; 
+        left:198px;
+        transform: rotate(0deg);
+    }
+    to{
+        top: -230px; left:1200px;
+        transform: rotate(330deg);
+    }
+}
