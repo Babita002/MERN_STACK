@@ -36,6 +36,9 @@ nav a {
     color: black;
 }
 @media screen and (max-width: 576px) {
+    body{
+        overflow-x: hidden;
+    }
     .logo{
         font-size:8px;
     }
@@ -58,6 +61,16 @@ nav a {
     position: relative;
     top: -15%;
     left: 45%;
+}
+.Shop-Now:hover{
+    box-shadow: 5px 10px 10px  #cb9153;
+    background-color:#f7a33c;
+    color:black
+}
+@media screen and (max-width: 576px) {
+    .Shop-Now{
+        left:35%;
+    }
 }
 
 /* -----Product Card--------- */
@@ -125,6 +138,14 @@ nav a {
     .product-card{
         height:1500px;
     }
+    .product-title{
+        font-size:35px;
+    }
+    .product-para{
+        font-size:15px;
+    }
+
+
 }
 
 
@@ -177,10 +198,10 @@ nav a {
         padding:5px;
     }
     .para3{
-        width:500px;
+        width:440px;
     }
     .img{
-        width:500px;
+        width:440px;
     }
 }
 
@@ -210,7 +231,7 @@ nav a {
 }
 @media screen and (max-width: 576px) {
     .quote1{
-        margin-left:470px;
+        margin-left:380px;
     }
 }
 
