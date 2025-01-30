@@ -11,7 +11,7 @@ function myFun(num){
 myFun(4);
 
 //Using Arrow Function
-var myfun = (num) => {
+let myfun = (num) => {
     if(num%2==0){
         console.log(num, "is even number.");
     }
