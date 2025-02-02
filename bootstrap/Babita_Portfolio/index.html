@@ -25,41 +25,46 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-light sticky-top">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <a class="navbar-brand me-auto" href="#">Portfolio</a>
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#about">About</a>
-              <a class="nav-link" href="#project">Projects</a>
-              <a class="nav-link" href="#skills">Skills</a>
-              <a class="nav-link" href="#contact">Contact</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <a class="navbar-brand me-auto" href="#">Portfolio</a>
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#project">Projects</a>
+                    <a class="nav-link" href="#education">Education</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </div>
+                <!-- Dark Mode Toggle -->
+                <div class="form-check form-switch ms-3">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label text-white" for="darkModeToggle"></label>
+                </div>
             </div>
-             <!-- Dark Mode Toggle -->
-             <div class="form-check form-switch ms-3">
-                <input class="form-check-input" type="checkbox" id="darkModeToggle">
-                <label class="form-check-label text-white" for="darkModeToggle"></label>
-            </div>
-          </div>
         </div>
-      </nav>
+    </nav>
     <!-- Home -->
     <div class="container-fluid gradient pt-5" id="home">
-        <div class="container border rounded-4 border-light border-3 bg-light bg-opacity-25 text-center">
-            <img src="Images/web.png" height="200px" width="350px">
-            <h1 class="text-secondary p-3 anim animate__animated animate__lightSpeedInRight">Aspiring Web Developer
-                <br><span class="anim"> Babita</span></h1>
-            <p class="text-secondary"> Currently pursuing Bachelor of Technology in Computer Science Engineering
-                from Guru Nanak Dev University.</p>
+        <div class="container border rounded-4 border-light border-3 bg-light bg-opacity-25 w-75 py-5">
+            <div class="row">
+                <div class="col-6 ">
+                    <h1 class="text-tertary p-3 animate__animated animate__backInLeft text-start pt-5 ps-5">Hii! I'm <span class="text-primary">Babita,</span></span><br>Aspiring Web Developer
+                    </h1>
+                    <p class="text-secondary text-start ps-5">Innovative Web Developer with Expertise in building modern, responsive, and scalable web applications using JavaScript, React, and Spring Boot.</p>
+                    <a href="#about"><button type="button"
+                        class="btn btn-primary rounded-5 px-3 ms-5 mb-3  animate__animated animate__flipInX">About</button></a>
+                <a href="#project"><button type="button"
+                        class="btn  rounded-5  px-3 mb-3 border border-light bg-opacity-50 animate__animated animate__flipInX">View
+                        my work</button></a>
+                </div>
+                <div class="col-3">
+                    <img src="Images/web.png"  height="300px" width="350px">
+                </div>
+            </div>
 
-
-            <a href="#about"><button type="button"
-                    class="btn btn-info rounded-5 px-3 mb-3 border border-light animate__animated animate__flipInX">About</button></a>
-            <a href="#project"><button type="button"
-                    class="btn btn-light rounded-5 px-3 mb-3 border border-light bg-opacity-50 animate__animated animate__flipInX">View
-                    my work</button></a>
         </div>
 
 
@@ -79,23 +84,29 @@
                     and other technologies.
                     Responsive Design - Ensuring websites work perfectly on all devices, from mobile phones to large
                     screens.
-                    Problem-Solving - Finding creative and efficient solutions to complex coding challenges.<br><br>I aim to develop impactful projects that solve real-world problems and improve user experiences. Whether it's building an e-commerce website, a management system, or an interactive web app, I strive to create solutions that make life easier and more efficient.<br><br>
-                    Outside of web development, I have a strong passion for fitness. I love going to the gym, working out, and staying active. Exercise not only keeps me physically fit but also helps me stay mentally focused, creative, and disciplined. The determination and persistence I build through fitness directly translate into my work as a developer, helping me stay motivated even when solving tough coding problems.
+                    Problem-Solving - Finding creative and efficient solutions to complex coding challenges.<br><br>I
+                    aim to develop impactful projects that solve real-world problems and improve user experiences.
+                    Whether it's building an e-commerce website, a management system, or an interactive web app, I
+                    strive to create solutions that make life easier and more efficient.<br><br>
+                    Outside of web development, I have a strong passion for fitness. I love going to the gym, working
+                    out, and staying active. Exercise not only keeps me physically fit but also helps me stay mentally
+                    focused, creative, and disciplined. The determination and persistence I build through fitness
+                    directly translate into my work as a developer, helping me stay motivated even when solving tough
+                    coding problems.
                 </p>
                 <!-- Download Button -->
-                <a href="resume.pdf" class="btn btn-primary btn-lg ms-3 mb-5" download>
+                <a href="resume.pdf" class="btn btn-primary btn-lg ms-3 " download>
                     <i class="bi bi-file-earmark-arrow-down animate__animated animate__flipInX"></i> Download Resume
                 </a>
             </div>
-            <div class="col text-center">
-                <img src="Images/me.png" class="image-fluid" style="height:400px">
+            <div class="col text-center image">
+                <img src="Images/me.png" class="img-fluid h-75">
             </div>
         </div>
     </div>
-    </div>
     <!-- --------projects---- -->
     <div class="container-fluid p-md-4" id="project">
-        <h1 class="my-4">Projects</h1>
+        <h1 class="my-4 ms-3">Projects</h1>
 
         <div class="row">
             <div class="col-md-4">
@@ -103,12 +114,13 @@
                     <h5 class="card-title text-center m-3">Hotel Airdrop</h5>
                     <img class="card-img-top img-fluid" src="Images/airdrop.png" alt="Card image cap" height="200vh">
                     <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        <p class="card-text">This is a wider card with supporting below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Code</button>
+                                <a href="https://github.com/Babita002/projects/tree/main/Airdrop" target="_blank"
+                                    class="btn btn-sm btn-outline-secondary">Code</a>
                             </div>
                         </div>
                     </div>
@@ -124,7 +136,8 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Code</button>
+                                <a href="https://github.com/Babita002/projects/tree/main/musclefactory(o)"
+                                    target="_blank" class="btn btn-sm btn-outline-secondary">Code</a>
                             </div>
                         </div>
                     </div>
@@ -141,7 +154,8 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Code</button>
+                                <a href="https://github.com/Babita002/projects/tree/main/bullsnutrition" target="_blank"
+                                    class="btn btn-sm btn-outline-secondary">Code</a>
                             </div>
                         </div>
                     </div>
@@ -160,7 +174,8 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Code</button>
+                                <a href="https://github.com/Babita002/projects/tree/main/cafe%20website" target="_blank"
+                                    class="btn btn-sm btn-outline-secondary">Code</a>
                             </div>
                         </div>
                     </div>
@@ -176,7 +191,8 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Code</button>
+                                <a href="https://github.com/Babita002/projects/tree/main/springboot%20project"
+                                    target="_blank" class="btn btn-sm btn-outline-secondary">Code</a>
                             </div>
                         </div>
                     </div>
@@ -184,40 +200,36 @@
             </div>
         </div>
     </div>
+
     <!-- -------Education -->
-    <div class="container">
-        <h1 class="ms-3">Education</h1>
-        <div class="container edu">
+    <div class="container-fluid education p-md-4" id="education">
+        <h1 class="ps-3">Education</h1>
+        <div class="container edu mx-auto">
             <div class="vertical">
-                <img src="developer.png" class="image-fluid" alt="image">
-                <div class="vertical-text">B.tech CSE (2021-2025) </div>
-                <div class="vertical-desc">Done my Graduation from Guru Nanak Dev University in Computer Science Engineering</div>
+                <div class="vertical-title">B.tech CSE (2021-2025) </div>
+                <div class="vertical-desc">Done my Graduation from Guru Nanak Dev University in Computer Science
+                    Engineering</div>
             </div>
             <div class="vertical">
-                <img src="developer.png" class="image-fluid" alt="image">
-                <div class="vertical-text">Secior Secondary Education (2020-2021) </div>
+                <div class="vertical-title">Senior Secondary Education (2020-2021) </div>
+                <div class="vertical-desc">Done my Senior Secondary Eduaction from Police DAV Public School(CBSE) </div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title">Secondary Education (2018-2019) </div>
+                <div class="vertical-desc">Done my Secondary Eduaction from Police DAV Public School(CBSE) </div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title"> Diploma in Information Technology(2019-2020) </div>
                 <div class="vertical-desc">Done my Secior Secondary Eduaction from Police DAV Public School(CBSE) </div>
             </div>
             <div class="vertical">
-                <img src="developer.png" class="image-fluid" alt="image">
-                <div class="vertical-text">Secondary Education (2019-2020) </div>
-                <div class="vertical-desc">Done my Secior Secondary Eduaction from Police DAV Public School(CBSE) </div>
-            </div>
-            <div class="vertical">
-                <img src="developer.png" class="image-fluid" alt="image">
-                <div class="vertical-text">  (2020-2021) </div>
-                <div class="vertical-desc">Done my Secior Secondary Eduaction from Police DAV Public School(CBSE) </div>
-            </div>
-            <div class="vertical">
-                <img src="developer.png" class="image-fluid" alt="image">
-                <div class="vertical-text"> Secior Secondary Education (2020-2021) </div>
+                <div class="vertical-title"> Course in Full Stack Development(June 2023-October 2023) </div>
                 <div class="vertical-desc">Done my Secior Secondary Eduaction from Police DAV Public School(CBSE) </div>
             </div>
 
 
         </div>
     </div>
-
     <!-- Contact -->
     <section class="contact-section text-center background" id="contact">
         <div class="container py-5">
@@ -245,8 +257,10 @@
     <footer class="footer text-center mt-4 ">
         <div class="container">
             <div class="d-flex justify-content-center gap-3">
-                <a href="linkfin.com/in/babita-suman-1624342b7" class="text-dark"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/its_babita82/profilecard/?igsh=ZjRjdzhkYmVnemo1" class="text-dark"><i class="fa-brands fa-instagram"></i></a>
+                <a href="linkdin.com/in/babita-suman-1624342b7" class="text-dark"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/its_babita82/profilecard/?igsh=ZjRjdzhkYmVnemo1" class="text-dark"><i
+                        class="fa-brands fa-instagram"></i></a>
                 <a href="https://snapchat.com/t/bzERTyBD" class="text-dark"><i class="fa-brands fa-snapchat"></i></a>
 
             </div>
