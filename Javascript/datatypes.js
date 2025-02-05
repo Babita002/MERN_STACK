@@ -34,3 +34,9 @@ console.log(cars[0]);
 //Data Object
 var date = new Date("10-01-25");
 console.log(date);
+
+let num = [1,2,3,4,5,6,7,8,9]
+let result = num.filter((el,index)=>{
+    return el*3;
+})
+console.log(result);
