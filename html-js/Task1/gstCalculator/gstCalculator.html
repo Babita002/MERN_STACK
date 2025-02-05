@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Calculator</title>
+    <style>
+        html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("bg.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #result {
+            color:white;
+        }
+        .button{
+            background-color:#d5a372;
+            color:white;
+            padding:10px;
+            outline:none;
+            margin-top:5px;
+        }
+        .button:hover{
+            background-color: #f8cb75;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="result"></h2>
+    <button onclick="calculator()" class="button">Calculate GST</button>
+    <script>
+        // Function
+        function calculator() {
+            let amount = parseInt(prompt("Enter the amount: "));
+            let gst = amount * 0.18;
+            let totalAmount = amount + gst;
+            document.getElementById("result").innerHTML = "Amount: ₹" + amount + "<br> GST: ₹" + gst + " <br>Total Amount(including GST): ₹" + totalAmount;
+        }
+    </script>
+</body>
+
+</html>
