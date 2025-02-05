@@ -54,16 +54,27 @@ let food_items = {
 console.log("Printing Cheese: ", food_items.veg.c);
 
 //QUESTION 4
-let flattened = [];
-function flatten(nested_array) {
-  for (let i = 0; i < nested_array.length; i++) {
-    for (let j = 0; j < nested_array[i].length; j++) {
-      console.log(nested_array[i][j]);
-    }
-  }
+function flatten(nested_array){
+  let flattened_array = nested_array.flat(Infinity);
+  console.log(flattened_array);
 }
 const nested_array = [
-  [1, 2, 3, 4, 5],
-  ["a", "b", "c", "d", "e"],
-];
-console.log(flatten(nested_array));
+  ["Name",
+    "Age",
+    "Gender",
+    [
+      "City",
+      "State",
+      "Country",
+      [
+        "Pincode",
+        "Shipping ID"
+      ]
+    ]
+  ]
+]
+flatten(nested_array);
+
+
+
+
