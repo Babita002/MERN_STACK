@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        #errorMsg1,
+        #errorMsg2 {
+            color: white;
+        }
+
+        .container {
+            width: 400px;
+            height: 180px;
+            margin: 180px 450px;
+            background-image: url("bg.avif");
+            padding: 25px;
+            border: 1px solid white;
+        }
+
+        .btn {
+            background-color: white;
+            padding: 10px;
+            margin-left: 160px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="submit.html" onsubmit="return checkForm()">
+            <label>Enter Email:</label>
+            <input id="email"><br><br>
+            <label>Enter Password:</label>
+            <input id="password"><br><br>
+            <span id="errorMsg1"></span><br><br>
+            <span id="errorMsg2"></span><br><br>
+            <button class="btn">Submit</button><br>
+        </form>
+    </div>
+
+    <script>
+        // Null Validation
+        function checkForm() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            if (email.trim().length <= 0 || password.trim().length <= 0) {
+                document.getElementById("errorMsg1").innerHTML = "*Field can't be empty!!";
+                return false;
+            }
+            if (email === "babita@gmail.com" && password === "2025") {
+                document.getElementById("errorMsg2").innerHTML=" ";
+                
+            }
+            else {
+                document.getElementById("errorMsg2").innerHTML = "*Inavlid email or password!!";
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
