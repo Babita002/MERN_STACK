@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Receipt Calculator</title>
+    <!-- Bootstrap Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
@@ -39,11 +40,13 @@
             border: 1px solid black;
             padding: 5px;
             text-align: center;
+            width: 300px;
         }
     </style>
 </head>
 
 <body>
+    
     <div class=" ms-3 mt-3 d-flex justify-content-center bg-info text-center box ">
         <!-- Admin panel -->
         <div class="box border-end border-dark bg-secondary">
@@ -67,12 +70,9 @@
             <div class="innerbox bg pt-3">
                 <button class="btn btn-danger my-3" onclick="transaction()">New Transaction</button>
                 <p>Select a product then add the number of units</p>
-                <select id="checkoutList">
-
-                </select>
+                <select id="checkoutList"></select>
                 Unit:
-                <input type="number" class="w-25" id="unit"><br>
-
+                <button class="w-25" id="unit">0</button><br>
                 <button class="btn btn-primary mt-3" onclick="added()">Add to Cart</button><br><br>
                 <div class="container  w-50 h-25 mb-5">
                     <div class="row">
@@ -103,16 +103,10 @@
         <!-- Recepit Panel -->
         <div class="box bg-secondary">
             <h2 class="bg-secondary text-light">Receipt</h2>
-            <div class="innerBox bg pt-3">
-                <div class="innerBox bg-light d-flex nav">
-                    <div class="col">Product</div>
-                    <div class="col">$/unit</div>
-                    <div class="col">Units</div>
-                    <div class="col">Price</div>
-                </div>
-                <div class="recipt text-start ms-3">
-                    <h6 id="dateTime"></h6>
-                    <table id="receiptTable">
+            <div class="recipt bg text-start pt-3">
+                <h6 id="dateTime"></h6>
+                <div id="receipt">
+                    <table id="receiptTable" class="bg-light">
                         <tr>
                             <th>Product</th>
                             <th>$/unit</th>
@@ -120,22 +114,23 @@
                             <th>Price</th>
                         </tr>
                     </table>
-                    <p id="totalPrice"></p>
-                    <p id="taxes"></p>
-                    <p id="amountDue"></p>
                 </div>
+                <p id="totalPrice"></p>
+                <p id="taxes"></p>
+                <p id="amountDue"></p>
             </div>
         </div>
     </div>
     <script>
         let products = [];  //store product name and price
-        let cart = [];   //store products with units
+        let cart = [];   //store product name, price with units
         function addProduct() {
             let pName = document.getElementById("name").value.trim();
             // Name  Validation 
             if (!pName) {
                 alert("Enter valid product name");
             }
+
             //Add product name to array
             products.push({ name: pName, price: null });
             updateProductLists();
@@ -167,11 +162,11 @@
                 alert("Enter valid product price");
             }
 
-            products.forEach(product => {
-                if (product.name === selectedProduct) {
-                    product.price = parseFloat(price);
+            for (let i = 0; i < products.length; i++) {
+                if (products[i].name === selectedProduct) {
+                    products[i].price = price;
                 }
-            });
+            }
             document.getElementById("msg").innerText = "Succseefully set " + name + " price to " + price;
 
             setTimeout(() => {
@@ -187,68 +182,73 @@
             products.forEach(product => {
                 let option = document.createElement("option");
                 option.text = `${product.name} - $${product.price}/unit`;
-                option.value = JSON.stringify(product);
-                checkoutList.add(option);
+                option.value = product.name;
+                checkoutList.appendChild(option);
             });
 
         }
 
         function digit(unit) {
-            document.getElementById("unit").value = unit;
+            document.getElementById("unit").innerHTML = unit;
         }
 
         function added() {
             let checkoutList = document.getElementById("checkoutList");
-            let selectedProduct = JSON.parse(checkoutList.value);
-            let unitInput = document.getElementById("unit");
-            let units = parseInt(unitInput.value);
+            let selectedProductName = checkoutList.value;
+            let units = document.getElementById("unit").innerHTML;
 
             if (!units || units <= 0) {
                 alert("Enter a valid number of units");
                 return;
             }
 
-            // Check if the product is already in the cart
-            let existingProduct = cart.find(item => item.name === selectedProduct.name);
-            if (existingProduct) {
-                existingProduct.units += units; // Increase units if already in cart
-            } else {
-                selectedProduct.units = units;
-                cart.push(selectedProduct); // Add new product with units
+            let selectedProduct = null;
+            for (let i = 0; i < products.length; i++) {
+                if (products[i].name === selectedProductName) {
+                    selectedProduct = products[i];
+                    break;
+                }
             }
-            unitInput.value = "";
+
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i].name === selectedProductName) {
+                    alert("Already in cart");
+                    return;
+                }
+            }
+
+            cart.push({ name: selectedProduct.name, price: selectedProduct.price, units: units });
             alert("Added to cart");
         }
 
         function receipt() {
-            let checkoutList = document.getElementById("checkoutList");
             let receiptTable = document.getElementById("receiptTable");
             let totalPrice = 0;
             // Date and Time
-            date = new Date();
+            let date = new Date();
             let date1 = date.getDate();
             let month = date.getMonth() + 1;
             let year = date.getFullYear();
             document.getElementById("dateTime").innerHTML = `Date: ${date1}/${month}/${year} <br> Time: ${date.getHours()}:${date.getMinutes()}`;
 
-            let rows = `<tr>
-                    <th>Product</th>
-                    <th>$ / Unit</th>
-                    <th>Units</th>
-                    <th>Total</th>
-                </tr>`;
+            if (cart.length === 0) {
+                alert("Cart is empty! Please add items before generating a receipt.");
+                return;
+            }
 
-                cart.forEach(product => {
-        let total = product.price * product.units;
-        totalPrice += total;
-        rows += `<tr>
+            let rows = document.getElementById("receipt").innerHTML;
+
+            cart.forEach(product => {
+                let total = product.price * product.units;
+                totalPrice += total;
+                rows += `<tr>
                     <td>${product.name}</td>
                     <td>$${product.price}</td>
                     <td>${product.units}</td>
-                    <td>$${total.toFixed(2)}</td>
+                    <td>$${total}</td>
                 </tr>`;
             });
-            
+
             let tax = totalPrice * 0.1;
             let amountDue = totalPrice + tax;
             receiptTable.innerHTML = rows;
