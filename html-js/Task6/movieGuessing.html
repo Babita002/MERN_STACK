@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Movie</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .list-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #input1, #input2, #input3 , #input4, #input5, #input6, #input7, #input8, #input9 {
+            width: 70px;
+            margin-right: 23px;
+
+        }
+
+        ul {
+            text-align: left;
+            list-style-position: inside;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="list-container">
+        <h1>Guess the Movie</h1>
+        <ul>
+            <li>Its's a Fantasy, Mystery & Horror movie</li>
+            <li>It is released in 2022</li>
+            <li>It's hollywood movie</li>
+            <li>Starring Jenna Marie Ortega</li>
+        </ul>
+        <br>
+    </div>
+    <!-- Images -->
+    <div class="images">
+        <img src="image1.png" id="img1" width="100px" height="100px">
+        <img src="image1.png" id="img2" width="100px" height="100px">
+        <img src="image1.png" id="img3" width="100px" height="100px">
+        <img src="image1.png" id="img4" width="100px" height="100px">
+        <img src="image1.png" id="img5" width="100px" height="100px">
+        <img src="image1.png" id="img6" width="100px" height="100px">
+        <img src="image1.png" id="img7" width="100px" height="100px">
+        <img src="image1.png" id="img8" width="100px" height="100px">
+        <img src="image1.png" id="img9" width="100px" height="100px">
+        <br><br>
+    </div>
+    <!-- Input fields -->
+    <div class="inputs">
+        <input type="text" id="input1" maxlength="1" oninput="check(1,'w')">
+        <input type="text" id="input2" maxlength="1" oninput="check(2,'e')">
+        <input type="text" id="input3" maxlength="1" oninput="check(3,'d')">
+        <input type="text" id="input4" maxlength="1" oninput="check(4,'n')">
+        <input type="text" id="input5" maxlength="1" oninput="check(5,'e')">
+        <input type="text" id="input6" maxlength="1" oninput="check(6,'s')">
+        <input type="text" id="input7" maxlength="1" oninput="check(7,'d')">
+        <input type="text" id="input8" maxlength="1" oninput="check(8,'a')">
+        <input type="text" id="input9" maxlength="1" oninput="check(9,'y')">
+    </div>
+    <script>
+        function check(index, value){
+            let input = document.getElementById("input" +index);
+            let image = document.getElementById("img" + index)
+            if(input.value.toUpperCase() == value.toUpperCase()){
+                input.disabled = true;
+                if(index<9){
+                    document.getElementById("input"+ (index+1)).focus();
+                }
+            }
+            else{
+                image.src="image2.png"; 
+            }
+        }
+    </script>
+
+</body>
+
+</html>
