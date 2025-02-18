@@ -1,8 +1,8 @@
-function Employee(){
+export default function Employee(){
     return(
         <div>
             <h2>Employee Information</h2>
-            <table>
+            <table className="table table-striped ">
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
@@ -32,8 +32,6 @@ function Employee(){
                     <td>6 LPA</td>
                 </tr>
             </table>
-            <hr/>
          </div>
     )
 }
-export default Employee
